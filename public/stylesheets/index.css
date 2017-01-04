@@ -1,0 +1,134 @@
+/* body {
+ font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding-top: 10px;
+}
+ */
+
+ #accordion .label {
+ 	margin-left: 10px;
+ 	margin-bottom: 5px;
+ 	float: left;
+ }
+ #accordion .label-default:hover {
+ 	background-color: #d9534f;
+ }
+ #recommend {
+ 	margin-top: 30px;
+ }
+ figure .img {
+ 	float: left;
+ 	margin-right: 10px;
+
+ }
+ .thumbnail {
+  overflow: hidden;
+ }
+ .thumbnail img {
+  transition: .5s;
+ }
+ .thumbnail:hover img {
+  transform: scale(1.2);
+ }
+  .panel h2 {
+  	border-left: 2px solid #d9534f;
+  	text-indent: 5px;
+  }
+  figure h3 {
+  	padding-top: 5px;
+
+  }
+  figure h3 a {
+  	color: #000;
+  	font-size: 20px;
+  }
+  figure h3 a:hover,.refresh:hover {
+  	color: #d9534f;
+  }
+  .refresh {
+  	float: right;
+  	font-size: 12px;
+  	
+  }
+  .author-info {
+    color: #919898;
+    padding-bottom: 15px;
+  }
+  .label {
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  .list .thumbnail img {
+    height: 150px;
+    width: 120px;
+  }
+  .list article {
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .hit strong {
+    display:inline-block;
+    width: 18px;
+    height: 18px;
+    background: gray;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+  }
+  .hit .red {
+    background: red;
+  }
+  .hit i {
+    font-style: normal;
+    float: right;
+    color: #919898;
+  }
+  .hit li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    position: relative;
+  }
+  .hit li:hover a {
+    color: red;
+  }
+  .hit li a {
+    color: #333;
+  }
+  .hit .img {
+    display: none;
+  }
+ /*  .hit .author {
+   color: #919898;
+   font-size: 12px;
+   margin-left: 15px;
+ } */
+  .hit .active .img {
+    display: block;
+  }
+  .hit .active div {
+    height: 40px;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+  }
+  .hit .active strong {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 1.5;
+    opacity: .8;
+  }
+  .hit .active div a {
+    color: #fff;
+    font-size: 24px;
+  }
+  .hit .active i {
+    color: #fff;
+    margin-top: 8px;
+  }
+
+
+  
+ 

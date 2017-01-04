@@ -1,0 +1,125 @@
+extends layout
+
+block content
+  .container
+    form#recipeform.form-horizontal(action="/upfood",method="post") 
+      .title
+        h1 创建菜谱
+          small 从现在起，不做孤单的美食家
+        .upfood
+          .cp-title.form-group
+              .col-sm-10
+                input.form-control(type="text",placeholder="菜谱名称")
+              .col-sm-2.text-center
+                select.seleco(name="isoriginal")
+                  option(value="0") 原创
+                  option(value="1") 转载
+          hr
+          #imgUploadNow.bigimg
+            // img.img-responsive(src="/images/bg_jiaic.jpg")
+            .bg
+            input#imgFile(type="file",name="uploadFile",style="opacity:0")
+            .load
+              img(src="",alt="",width='600',height='400',style="cursor:pointer")
+              span.glyphicon.glyphicon-refresh.refresh(title="更换图片")
+            .loading1 正在上传
+          .select
+            select
+              option 烹饪难度
+              option 简单
+              option 一般
+              option 难
+            select
+              option 烹饪时间
+              option 10分钟左右
+              option 20分钟左右
+              option 30分钟左右
+              option 1小时以上
+          .describe 
+            textarea.form-control(name="describe",rows="3",placeholder="这道菜背后的故事～(选填)")
+          .row
+            mixin list(str1,str2)
+              .row.form-group
+                .col-xs-8
+                  input.form-control(type="text",placeholder=str1)
+                .col-xs-3
+                  input.form-control(type="text",placeholder=str2)
+                .col-xs-1
+                  button.close(type="button",tabindex="-1")
+                    span x
+            .col-md-6
+              .materials
+                .row.form-group
+                  .col-xs-8 主料
+                  .col-xs-3 用量
+                  .col-xs-1 
+                +list('如:五花肉','如:250g')
+                +list()
+                +list()
+                +list()
+                .text-right.addrow
+                  a(href="javascript:;") 增加一栏       
+            .col-md-6
+              .materials
+                .row
+                  .col-xs-8 辅料
+                  .col-xs-3 用量
+                  .col-xs-1 
+                +list('如:盐','如:1勺')
+                +list()
+                +list()
+                +list()
+                .text-right.addrow
+                  a(href="javascript:;") 增加一栏  
+          // 步骤 开始
+          .step
+            h3 步骤
+            ol
+              mixin buzhou-list(num)
+                li.row
+                  .col-xs-3.text-center
+                    div.step-img
+                      .addtext 
+                        |<span class="glyphicon glyphicon-plus"></span>添加步骤图
+                        input(type="file",style="opacity:0;position:absolute")
+                      .loging(style="display:none") 正在上传...
+                      div.loginv(style="display:none")
+                        span.glyphicon.glyphicon-refresh.refresh
+                        img.img-responsive(src="")
+                  .col-xs-9
+                    .row
+                      .col-xs-1
+                        span.seq.text-center #{num}
+                      .col-xs-11
+                        textarea.step-dec.form-control(rows="3")
+                        span.fun-ico.hidden
+                          span.glyphicon.glyphicon-chevron-up
+                          span.glyphicon.glyphicon-chevron-down
+                          span.glyphicon.glyphicon-plus
+                          span.glyphicon.glyphicon-remove
+              +buzhou-list(1)
+              +buzhou-list(2)
+              +buzhou-list(3)
+            .text-right.addrow
+              a(href="javascript:;") 增加一步  
+                  
+          // 步骤 结束
+          .tips
+            h3 小贴士
+            textarea.form-control(placeholder="选填",rows="3")  
+          .tag
+            h3 添加标签
+              small （多个标签用空格隔开）
+            .tag-box
+              span.label.label-danger 家常菜
+                |<input type="hidden" name="tagname[]" value="家常菜" />
+                |<a class="clos" href="javascript:;">x</a>
+              input.hid.addlabel.form-control(type="text")  
+          .submit.text-center
+            button.btn.btn-danger 发布菜谱
+
+                  
+
+
+
+  include ./footer.pug

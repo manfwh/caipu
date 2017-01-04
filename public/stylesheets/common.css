@@ -1,0 +1,90 @@
+body {
+ 	/* padding-bottom: 1000px; */
+ 	font-family: 'microsoft yahei';
+ 	background-color: #efefef;
+ }
+ ul,ol {
+  padding: 0;
+ }
+ li {
+  list-style: none;
+ }
+ a:hover{
+  text-decoration: none;
+ }
+.navbar {
+  border-radius: 0;
+ }
+ #sorts {
+  overflow:hidden;
+ }
+ #modal .info {
+  color: #d9534f;
+ }
+ .fl {
+  float: left;
+ }
+ .fr {
+  float: right;
+ }
+ .hid {
+  visibility: hidden;
+ }
+ 
+ /* 底部 */
+  .footer {
+    padding-top:60px;
+  }
+  .foot-left {
+    padding-top: 5px;
+  }
+  .footer a {
+    color:#777;
+  }
+  .footer ul.foot-left>li+li:before {
+    padding: 0 10px;
+    color: #ccc;
+    content: "|";
+  }
+  .footer .foot-right li {
+    display: inline-block;
+    padding: 0 2px;
+  }
+  .footer .foot-right a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    top:0;
+    background-image:url('/images/index.png');
+  }
+  .footer .foot-right span {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+  .footer .text {
+    font-size: 16px;
+    margin-right: 10px;
+    line-height: 2;
+  }
+  .footer .foot-right li span:hover {
+    background:rgba(0,0,0,0.3);
+  }
+  .footer .item2 {
+    background-position: -34px 0;
+  }
+  .footer .item3 {
+    background-position: -68px 0;
+  }
+  .footer .item4 {
+    background-position: -102px 0;
+  }
+  .footer .item5 {
+    background-position: -136px 0;
+  }

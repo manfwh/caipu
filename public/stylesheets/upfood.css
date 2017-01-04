@@ -1,0 +1,214 @@
+.refresh {
+	position: absolute;
+	right:0;
+	top: 0;
+	background-color: #d9534f;
+	color: #fff;
+	padding: 4px;
+	border-radius: 4px;
+	cursor:pointer;
+	display: none;
+}
+.title h1 {
+	font-size: 24px;
+	text-align: center;
+}
+.title small {
+	font-size: 50%;
+	padding-left: 10px;
+}
+.upfood {
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 10px 40px;
+}
+.seleco {
+	font-size: 12px;
+	margin-top: 5px;
+}
+.bigimg {
+	overflow: hidden;
+	position: relative;
+
+}
+.bigimg .bg {
+	background : url('/images/bg_jiaic.jpg') no-repeat;
+	width: 600px;
+	height: 400px;
+}
+.bigimg .load {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	display: none;
+}
+.bigimg .load:hover .refresh {
+	display: block;
+}
+.loading1 {
+	background: url('/images/loadpic.gif') no-repeat center center;
+	text-align: center;
+	background-color: #c6b7a4;
+	display: none; 
+	line-height: 400px;
+	width: 600px;
+}
+.bigimg input {
+	position: absolute;
+
+}
+.select {
+	padding: 10px 0;
+}
+.describe {
+	margin-bottom: 20px;
+}
+.materials {
+	background-color: #F4F0EC;
+	padding: 10px;
+	border-radius: 2px;
+}
+.materials .row {
+	margin: 0;
+}
+.materials .col-xs-8,.materials .col-xs-3 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.form-horizontal .form-group {
+	margin: 0;
+	margin-bottom: 5px;
+}
+.materials .col-xs-1 {
+	padding-right: 8px;
+}
+.materials input{
+	font-size: 12px;
+	padding-right: 0;
+}
+.addrow a {
+	font-size: 12px;
+	padding-right: 5px;
+}
+
+.step-dec{
+
+}
+.step li{
+	cursor: move;
+}
+.step .col-xs-1 {
+	
+}
+.step .col-xs-1,.step .col-xs-11 {
+	margin: 0;
+	padding: 0;
+}
+.step .seq {
+	height: 74px;
+	line-height: 40px;
+	background-color: #d9534f;
+	color: #fff;
+	display: block;
+	border-radius: 4px 0 0 4px;
+}
+.step li {
+	margin-bottom: 10px;
+	/*  position: relative;  */
+	z-index: 1;	
+}
+.step li .row {
+	margin-right: 0;
+}
+.step .drag {
+	width: 670px;
+	height: 74px;
+	position: absolute;
+}
+.step textarea {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.step .step-img {
+	background: #F4F0EC;
+	height: 74px;
+	position: relative;
+}
+.step .addtext {
+	padding-top: 25%;
+	cursor: pointer;
+	height: 80%;
+	position: relative;
+}
+
+.step .fun-ico {
+	width:14px;
+	display: block;
+	position: absolute;
+	right: -18px;
+	top: 0;
+
+}
+.step .fun-ico .glyphicon {
+	color: #666;
+	cursor: pointer;
+	font-size: 12px;
+	background-color: #F4F0EC;
+	padding: 2px;
+	border-radius: 4px;
+	font-weight: lighter;
+}
+.tag-box {
+	vertical-align: middle;
+    padding: 8px;
+    border: 1px solid #deded3;
+    background: #fff;
+    color: #999;
+    border-radius: 4px;
+}
+.tag .label {
+	margin-right:5px;
+}
+.tag .clos {
+	color: #fff;
+}
+.tag .addlabel {
+	width: auto;
+	display: inline-block;
+	margin-left: 10px;
+	height: 28px;
+}
+.tag .label-danger {
+	float: left;
+	margin-top: 5px;
+}
+
+.submit {
+	margin-top: 10px;
+}
+.submit .btn-danger {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 响应式 */
+@media (min-width: 992px) {
+	.container {
+		width: 940px;
+	}
+	.upfood {
+		width: 720px;	
+	}
+}

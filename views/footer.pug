@@ -1,0 +1,58 @@
+#modal.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type="button",data-dismiss="modal")
+            span(aria-hidden="true") &times;
+          h4.modal-title 用户登录
+        .modal-body
+          form 
+            .form-group
+              label(for="loginname") 用户名：
+              input#loginName.form-control(placeholder="用户名")
+            .form-group
+              label(for="loginpassword") 密码
+              input#password.form-control(placeholder="密码")
+            #confirm.form-group
+              label(for="loginpassword") 确认密码
+              input#confirmPassword.form-control(placeholder="密码")
+          .modal-footer
+            p.info.pull-left
+            button.btn.btn-default(type="button",data-dismiss="modal") 取消
+            a#bottomBtn.btn.btn-primary(href="###",data-dismiss="modal") 登录
+footer.footer
+  .container
+    .row
+      .col-md-8
+        ul.list-inline.text-center.foot-left
+          li
+            a(href="##",target="_blank") 关于本站
+          li
+            a(href="##",target="_blank") 版权声明
+          li
+            a(href="##",target="_blank") 广告服务
+          li
+            a(href="##",target="_blank") 反馈建议 qq:841533182
+      .col-md-4
+        span.pull-left.text 关注本站
+        ul.foot-right.text-center
+          li
+            a.item1(href="##",target="_blank")
+              span
+          li
+            a.item2(href="##",target="_blank")
+              span
+          li
+            a.item3(href="##",target="_blank")
+              span
+          li
+            a.item4(href="##",target="_blank")
+              span
+          li
+            a.item5(href="##",target="_blank")
+              span
+
+script(src="/javascripts/jquery.js")
+script(src="/lib/dist/js/bootstrap.js")
+script(src="/javascripts/common.js")
+script(src="/javascripts/"+public.jsFile+".js")

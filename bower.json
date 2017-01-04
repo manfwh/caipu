@@ -1,0 +1,19 @@
+{
+  "name": "my",
+  "description": "",
+  "main": "",
+  "authors": [
+    "fwh"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ]
+}

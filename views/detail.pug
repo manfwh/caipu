@@ -1,0 +1,99 @@
+extends layout
+
+block content
+  .container
+    ol.breadcrumb
+      li
+        a(href="#") 首页
+      li
+        a(href="#") 家常菜
+      li.active #{cp.title}
+    .row
+      // 菜谱信息 开始
+      .col-md-8
+        img.img-responsive.main-img(src="/images/1000_title.jpg",alt="")
+        h1 肥牛金针菇
+          small.popularity.pull-right
+            |<span id="collectview">17130</span>
+            |浏览
+        .cp-show-intro 和朋友小聚，在家里边吃边聊气氛是最好了！没有拿手菜？没有硬菜？来！这道菜绝对能帮你HOLD住场面！几分钟就能端上桌，要色有色要味有味！
+        table#cp-table.table.table-bordered.table-responsive
+          tr.active
+            th.
+              烹饪难度：
+              一般
+            th.
+              烹饪时间：
+              <1小时
+          tr.active
+            th(colspan="2",style="color:red") 主料
+          tr
+            td
+              span 肥牛卷
+              i 250克
+            td
+              span 金针菇
+              i 300克
+          tr.active
+            th(colspan="2",style="color:blue") 调料
+          tr
+            td
+              span 蒜蓉
+              i 1把
+            td
+              span 郫县豆瓣酱
+              i 2勺
+          tr
+            td
+              span 水
+              i 1大碗(约500毫升)
+            td
+              span 盐
+              i 适量
+        h2 作法步骤
+        ol#list.clearfix
+          each val,index in cp.step
+            li.clearfix
+              figure
+                img.li-img.img-responsive(src=val.img)
+                figcaption.caption
+                  |<b> #{index+1}.</b>
+                  |#{val.caption}
+
+
+
+        // 评论区 开始
+        .comment
+          h2 肥牛金针菇的评论  
+          .text
+            textarea.form-control
+            button.btn.btn-danger#submit 评论 
+          ul.list-unstyled
+            each val,index in cp.comment
+              li.clearfix.item
+                .pull-left.uname
+                  b #{val.username}
+                .wrap.fl
+                  div 
+                    span.time #{val.time}
+                    a.reply-btn(href="##") 回复
+                    p.cm-content #{val.content}
+        // 评论区 结束
+      // 菜谱信息 结束
+      // 菜谱作者 开始
+      .col-md-4
+        .author-info
+          span.author #{cp.author}
+          button.btn.btn-danger 关注
+          .num
+            span.num1
+              |<b>197</b>
+              |菜谱
+            span.num2
+              |<b>1</b>
+              |粉丝
+      // 菜谱作者 结束
+
+
+  
+  include ./footer.pug

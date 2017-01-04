@@ -1,0 +1,336 @@
+extends layout
+
+block content
+  // 主体内容
+  .container
+    // 分类/轮播 开始
+    .row#sorts
+      //菜谱分类开始
+      .col-md-5
+        #accordion.panel-group
+          .panel.panel-default
+            #headingOne.panel-heading
+              h4.panel-title
+                a(data-toggle="collapse",data-parent="#accordion",href="#collapseOne") 家常菜谱
+            #collapseOne.panel-collapse.collapse.in
+              .panel-body
+                a.label.label-default 家常菜
+                a.label.label-default 私家菜
+                a.label.label-default 凉菜
+                a.label.label-default 海鲜
+                a.label.label-default 热菜
+                a.label.label-default 汤粥
+                a.label.label-default 素食
+                a.label.label-default 酱料蘸料
+                a.label.label-default 甜品点心
+          .panel.panel-default
+            #headingOne.panel-heading
+              h4.panel-title
+                a(data-toggle="collapse",data-parent="#accordion",href="#collapseTwo") 中华菜系
+            #collapseTwo.panel-collapse.collapse
+              .panel-body
+                a.label.label-default 川菜
+                a.label.label-default 湘菜
+                a.label.label-default 粤菜
+                a.label.label-default 东北菜
+                a.label.label-default 鲁菜
+                a.label.label-default 浙菜
+                a.label.label-default 苏菜
+                a.label.label-default 清真菜
+                a.label.label-default 闽菜
+                a.label.label-default 沪菜
+                a.label.label-default 京菜
+                a.label.label-default 湖北菜
+                a.label.label-default 徽菜
+                a.label.label-default 豫菜
+                a.label.label-default 西北菜
+                a.label.label-default 云贵菜
+                a.label.label-default 江西菜
+                a.label.label-default 山西菜
+                a.label.label-default 广西菜
+                a.label.label-default 港台菜
+                a.label.label-default 其他菜
+          .panel.panel-default
+            #headingOne.panel-heading
+              h4.panel-title
+                a(data-toggle="collapse",data-parent="#accordion",href="#collapseThree") 美容瘦身
+            #collapseThree.panel-collapse.collapse
+              .panel-body
+                a.label.label-default 减肥食谱
+                a.label.label-default 美白食谱
+                a.label.label-default 排毒养颜
+                a.label.label-default 紧致肌肤
+                a.label.label-default 丰胸
+                a.label.label-default 祛痘祛斑
+                a.label.label-default 延缓衰老
+                a.label.label-default 健康食谱
+          .panel.panel-default
+            #headingOne.panel-heading
+              h4.panel-title
+                a(data-toggle="collapse",data-parent="#accordion",href="#collapseFour") 外国食谱
+            #collapseFour.panel-collapse.collapse
+              .panel-body
+                a.label.label-default 西餐
+                a.label.label-default 韩国料理
+                a.label.label-default 日本料理
+                a.label.label-default 法国大餐
+                a.label.label-default 意大利美食
+         
+      //菜谱分类 结束
+      // 轮播图 开始
+      .col-md-7 
+        #carousel-example-generic.carousel.slide(data-ride="carousel")
+          ol.carousel-indicators
+            li.active(data-target="#carousel-example-generic",data-slide-to="0")
+            li(data-target="#carousel-example-generic",data-slide-to="1")
+            li(data-target="#carousel-example-generic",data-slide-to="2")
+          .carousel-inner(role="listbox")
+            .item.active
+              a(href="##")
+                img(src="/images/b1.jpg",alt="",style="float:left")
+            .item
+              img(src="/images/b2.jpg",alt="")
+            .item
+              img(src="/images/b3.jpg",alt="")
+          a.left.carousel-control(  href="#carousel-example-generic",role="button",data-slide="prev")
+            span.glyphicon.glyphicon-chevron-left
+            span.sr-only 上一张
+          a.right.carousel-control(      href="#carousel-example-generic",role="button",data-slide="next")
+            span.glyphicon.glyphicon-chevron-right
+            span.sr-only 下一张 
+      // 轮播图 结束 
+    // 分类/轮播 结束
+    // 为你推荐 开始
+    section#recommend
+      .panel.panel-default
+        .panel-heading
+          h2.panel-title  为你推荐
+            a.refresh(href="##") 换一批  
+              span.glyphicon.glyphicon-refresh     
+        .panel-body
+          .row
+            .col-md-4.clearfix
+              figure
+                a.img.thumbnail(href="##")
+                  img(src="/images/tj1.jpg",alt="",width="120",height="150")
+                figcaption.caption
+                  h3
+                    a(href="##") #{title[0]}
+                  p 冬天进补都会选择大鱼大肉，今天小编来教大家一款冬季食补菜，好吃又好做的香菇蒸腊排骨。
+            .col-md-4.clearfix.clearfix
+              figure
+                a.img.thumbnail(href="##")
+                  img(src="/images/tj2.jpg",alt="",width="120",height="150")
+                figcaption.caption
+                  h3
+                    a(href="##") 蘑菇三文鱼贝柱粥
+                  p 早上喝一碗粥是件幸福的事，很多人忙着上班没时间弄，电饭煲里定时出锅的早餐粥来救你
+            .col-md-4.clearfix
+              figure
+                a.img.thumbnail(href="##")
+                  img(src="/images/tj3.jpg",alt="",width="120",height="150")
+                figcaption.caption
+                  h3
+                    a(href="##") 霸王花鱿鱼瘦肉汤
+                  p 冬季喝点汤暖胃又舒心，尤其在降温的日子里，如果有这样碗汤可以品尝，真算是一种享受。
+          .row
+            .col-md-4.clearfix
+              figure
+                a.img.thumbnail(href="##")
+                  img(src="/images/tj4.jpg",alt="",width="120",height="150")
+                figcaption.caption
+                  h3
+                    a(href="##") 青椒炒素鸡
+                  p 今天小编带给大家的是一道青椒炒素鸡，虽然是一道素菜，但吃起来却比肉的味道毫不逊色。
+            .col-md-4.clearfix
+              figure
+                a.img.thumbnail(href="##")
+                  img(src="/images/tj5.jpg",alt="",width="120",height="150")
+                figcaption.caption
+                  h3
+                    a(href="##") 风味鸡蛋汇
+                  p 鸡蛋的烹饪手法就那几样，都吃腻了，小编教大家一款风味鸡蛋汇，吃过之后你会再爱上鸡蛋!
+            .col-md-4.clearfix
+              figure
+                a.img.thumbnail(href="##")
+                  img(src="/images/tj6.jpg",alt="",width="120",height="150")
+                figcaption.caption
+                  h3
+                    a(href="##") 三鲜冬笋丝
+                  p 现在正是吃冬笋的季节，冬笋中有丰富的粗纤维，对人体大有益处，小编带来一道三鲜冬笋丝。
+    
+    // 为你推荐 结束
+    // 最新/热门 开始
+    section
+      .row
+        // 最新发布 开始
+        .col-md-8
+          .panel.panel-default
+            .panel-heading
+              h2.panel-title 最新发布
+            .panel-body.list
+              article.clearfix
+                figure
+                    a.img.thumbnail(href="##")
+                      img(src="/images/new1.jpg",alt="",width="120",height="150")
+                    figcaption.caption
+                      h3
+                        a(href="##") 黄金炸猪排
+                      .author-info
+                        span.author 作者:海燕的厨房
+                        span.date-time &nbsp;&nbsp;发布时间：
+                          em 2小时前
+                        span.classify &nbsp; &nbsp;&nbsp; &nbsp;标签：
+                          span.label.label-default 家常菜谱
+                      p 
+                        | <strong>【导读】</strong>
+                        |很多人都喜欢吃炸鸡排，不过猪排用炸的味道也不必炸鸡排差哦！今天就介绍一道黄金炸猪排。
+              article.clearfix
+                figure
+                    a.img.thumbnail(href="##")
+                      img(src="/images/new1.jpg",alt="",width="120",height="150")
+                    figcaption.caption
+                      h3
+                        a(href="##") 黄金炸猪排
+                      .author-info
+                        span.author 作者:海燕的厨房
+                        span.date-time &nbsp;&nbsp;发布时间：
+                          em 2小时前
+                        span.classify &nbsp; &nbsp;&nbsp; &nbsp;标签：
+                          span.label.label-default 家常菜谱
+                      p 
+                        | <strong>【导读】</strong>
+                        |很多人都喜欢吃炸鸡排，不过猪排用炸的味道也不必炸鸡排差哦！今天就介绍一道黄金炸猪排。
+              article.clearfix
+                figure
+                    a.img.thumbnail(href="##")
+                      img(src="/images/new1.jpg",alt="",width="120",height="150")
+                    figcaption.caption
+                      h3
+                        a(href="##") 黄金炸猪排
+                      .author-info
+                        span.author 作者:海燕的厨房
+                        span.date-time &nbsp;&nbsp;发布时间：
+                          em 2小时前
+                        span.classify &nbsp; &nbsp;&nbsp; &nbsp;标签：
+                          span.label.label-default 家常菜谱
+                      p 
+                        | <strong>【导读】</strong>
+                        |很多人都喜欢吃炸鸡排，不过猪排用炸的味道也不必炸鸡排差哦！今天就介绍一道黄金炸猪排。
+              article.clearfix
+                figure
+                    a.img.thumbnail(href="##")
+                      img(src="/images/new1.jpg",alt="",width="120",height="150")
+                    figcaption.caption
+                      h3
+                        a(href="##") 黄金炸猪排
+                      .author-info
+                        span.author 作者:海燕的厨房
+                        span.date-time &nbsp;&nbsp;发布时间：
+                          em 2小时前
+                        span.classify &nbsp; &nbsp;&nbsp; &nbsp;标签：
+                          span.label.label-default 家常菜谱
+                      p 
+                        | <strong>【导读】</strong>
+                        |很多人都喜欢吃炸鸡排，不过猪排用炸的味道也不必炸鸡排差哦！今天就介绍一道黄金炸猪排。
+            .panel-footer.text-center
+              a(href="##") 加载更多
+        // 最新发布 结束
+        .col-md-4
+          // 热门菜谱 开始
+          .panel.panel-default
+            .panel-heading
+              h2.panel-title 热门菜谱
+            .panel-body
+              ol.hit
+                li.active
+                  div
+                    strong.red 1
+                    a(href="##") 可乐鸡翅
+                    i 阅读数：17234
+                  a.img(href="##")
+                    img.img-responsive(src="/images/hit1.jpg",alt="")
+                li
+                  div
+                    strong.red 2
+                    a(href="##") 莲藕炖排骨汤
+                    i 阅读数：16764
+                  a.img(href="##")
+                    img.img-responsive(src="/images/hit2.jpg",alt="")
+                li
+                  div
+                    strong.red 3
+                    a(href="##") 红烧鱼籽
+                    i 阅读数：15274
+                  a.img(href="##")
+                    img.img-responsive(src="/images/hit3.jpg",alt="")
+                li
+                  div
+                    strong 4
+                    a(href="##") 红焖啤酒鸭
+                    i 阅读数：13236
+                  a.img(href="##")
+                    img.img-responsive(src="/images/hit4.jpg",alt="")
+                li
+                  div
+                    strong 5
+                    a(href="##") 扁食萝卜丝汤
+                    i 阅读数：14534
+                  a.img(href="")
+                    img.img-responsive(src="/images/hit5.jpg",alt="")
+                li
+                  div
+                    strong 6
+                    a(href="##") 牛油果蒸蛋
+                    i 阅读数：9254
+                  a.img(href="##")
+                    img.img-responsive(src="/images/hit6.jpg",alt="")
+          // 热门菜谱 结束
+          .pancel.pancel-default
+            .panel-heading
+              h2.panel-title 
+    // 最新/热门 结束
+               
+
+
+
+
+
+  // 主体内容 结束
+  // 登录弹框开始
+  #modal.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type="button",data-dismiss="modal")
+            span(aria-hidden="true") &times;
+          h4.modal-title 用户登录
+        .modal-body
+          form 
+            .form-group
+              label(for="loginname") 用户名：
+              input#loginName.form-control(placeholder="用户名")
+            .form-group
+              label(for="loginpassword") 密码
+              input#password.form-control(placeholder="密码")
+            #confirm.form-group
+              label(for="loginpassword") 确认密码
+              input#confirmPassword.form-control(placeholder="密码")
+          .modal-footer
+            p.info.pull-left
+            button.btn.btn-default(type="button",data-dismiss="modal") 取消
+            a#bottomBtn.btn.btn-primary(href="###",data-dismiss="modal") 登录
+  // 登录弹框结束
+
+        
+          
+
+          
+
+          
+
+
+
+  include ./footer.pug
+
+

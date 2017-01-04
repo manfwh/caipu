@@ -1,0 +1,84 @@
+.popularity {
+  font-size: 50%;
+}
+#collectview {
+  font-size: 150%;
+  color: #d9534f;
+
+}
+.main-img {
+  margin: 0 auto;
+}
+.cp-show-intro {
+  background-color: #fff;
+  padding: 10px;
+  line-height: 1.8;
+  text-indent: 2em;
+}
+#cp-table {
+  background-color: #fff;
+}
+#cp-table i {
+  float: right;
+  color: #999;
+  margin-right: 15px;
+}
+#list {
+  background-color: #fff;
+  padding: 20px;
+}
+#list li {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 15px;
+   padding-top:10px;
+}
+#list .li-img {
+  margin-right: 10px;
+  float: left;
+}
+#list .caption {
+  padding-top: 10px;
+
+}
+.author {
+  font-size:20px;
+}
+.author-info b {
+  color: #d9534f;
+  font-size: 150%;
+}
+.author-info .btn {
+  margin-left: 20px;
+}
+.num {
+  padding-top: 50px;
+}
+.num2:before {
+  padding: 0 10px;
+  color: #ccc;
+  content: "|";
+}
+
+
+
+/* 评论区 */
+#submit {
+  margin-top: 5px;
+}
+.uname {
+  margin-right: 5px;
+}
+.item {
+  border-bottom: 1px dashed #ccc;
+  padding-top: 10px;
+}
+.item .time {
+  font-size: 60%;
+  color: #ccc;
+}
+.cm-content {
+  padding-top: 10px;
+}
+.reply-btn {
+  margin-left: 10px;
+}

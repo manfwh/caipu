@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{title}
+    link(rel='stylesheet', href='/lib/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/common.css')
+    link(rel='stylesheet', href='/stylesheets/'+public.css+'.css')
+  body
+    // 导航条开始
+    nav.navbar.navbar-inverse(role="navigation")
+      .container-fluid.navbar-inner
+        .navbar-header
+          // 响应式按钮
+          button.navbar-toggle(type="buton",data-toggle="collapse",data-target=".navbar-responsive-collapse")
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/") 菜谱网
+        .collapse.navbar-collapse.navbar-responsive-collapse
+          ul.nav.navbar-nav
+            li.active 
+              a(href="##") 首页
+          form.navbar-form.navbar-left(action="##",rol="search")
+            .form-group
+              .input-group
+                input.form-control(type="text",placeholder="搜菜谱/用户")
+                a.input-group-btn(href="##")
+                  button.btn.btn-default(type="button")
+                    span.glyphicon.glyphicon-search
+          buttton#login.btn.btn-default.navbar-btn.navbar-right(type="button",style="margin-left:5px") 登陆
+          button#register.btn.btn-default.navbar-btn.navbar-right(type="button") 注册
+          a(href="/upfood").btn.btn-success.navbar-btn.navbar-right(type="button") 发布菜谱
+    // 导航条结束
+
+    block content
+
